@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_app1/common/color_extension.dart';
 
 class DetailsContentContainer extends StatelessWidget {
   final Widget child;

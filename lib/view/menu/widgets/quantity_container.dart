@@ -18,7 +18,7 @@ class QuantityContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         height: 25,
         alignment: Alignment.center,
         decoration: BoxDecoration(
