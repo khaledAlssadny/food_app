@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:food_app1/common/color_extension.dart';
 import 'package:food_app1/common_widget/tab_button.dart';
 import 'package:food_app1/view/home/home_view.dart';
+import 'package:food_app1/view/offer/offer_view.dart';
+import 'package:food_app1/view/profile/profile_view.dart';
 
 import '../menu/menu_view.dart';
 
@@ -84,7 +86,7 @@ class _MainTabViewState extends State<MainTabView> {
                       onTap: () {
                         if (selctTab != 1) {
                           selctTab = 1;
-                          selectPageView = Container(); //OfferView();
+                          selectPageView = OfferView(); //OfferView();
                         }
                         if (mounted) {
                           setState(() {});
@@ -101,7 +103,7 @@ class _MainTabViewState extends State<MainTabView> {
                       onTap: () {
                         if (selctTab != 3) {
                           selctTab = 3;
-                          selectPageView = Container(); // ProfileView();
+                          selectPageView = ProfileView(); // ProfileView();
                         }
                         if (mounted) {
                           setState(() {});

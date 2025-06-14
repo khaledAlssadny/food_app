@@ -6,13 +6,15 @@ class RoundIConButton extends StatelessWidget {
   const RoundIConButton(
       {super.key,
       required this.title,
-      required this.icon,
+      this.icon = "",
       required this.color,
-      required this.onPressed});
+      required this.onPressed,
+      this.fontSize = 12});
   final VoidCallback onPressed;
   final String title;
   final Color color;
   final String icon;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +29,13 @@ class RoundIConButton extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset(
-              icon,
-              width: 15,
-              height: 15,
-              fit: BoxFit.contain,
-            ),
+            if (icon.isNotEmpty)
+              Image.asset(
+                icon,
+                width: 15,
+                height: 15,
+                fit: BoxFit.contain,
+              ),
             const SizedBox(
               width: 8,
             ),
@@ -40,7 +43,7 @@ class RoundIConButton extends StatelessWidget {
               title,
               style: TextStyle(
                   color: TColor.white,
-                  fontSize: 12,
+                  fontSize: fontSize,
                   fontWeight: FontWeight.w500),
             ),
           ],
